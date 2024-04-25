@@ -5,9 +5,10 @@ defmodule Conduit.Mixfile do
     [
       app: :conduit,
       version: "0.0.1",
-      elixir: "~> 1.6",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      # compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
@@ -25,24 +26,25 @@ defmodule Conduit.Mixfile do
     [
       {:bcrypt_elixir, "~> 1.0"},
       {:comeonin, "~> 4.0"},
-      {:commanded, "~> 1.1"},
-      {:commanded_ecto_projections, "~> 1.1"},
-      {:commanded_eventstore_adapter, "~> 1.1"},
-      {:eventstore, "~> 1.1"},
-      {:cors_plug, "~> 1.4"},
+      {:commanded, "~> 1.4"},
+      {:commanded_ecto_projections, "~> 1.4"},
+      {:commanded_eventstore_adapter, "~> 1.4"},
+      {:eventstore, "~> 1.4"},
+      {:cors_plug, "~> 3.0"},
       {:elixir_uuid, "~> 1.2"},
-      {:plug_cowboy, "~> 2.1"},
-      {:exconstructor, "~> 1.1"},
-      {:ex_machina, "~> 2.1", only: :test},
-      {:gettext, "~> 0.11"},
-      {:guardian, "~> 1.2"},
-      {:jason, "~> 1.1"},
-      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
+      {:plug_cowboy, "~> 2.7"},
+      {:exconstructor, "~> 1.2"},
+      {:ex_machina, "~> 2.7", only: :test},
+      {:gettext, "~> 0.24"},
+      {:guardian, "~> 2.3"},
+      {:jason, "~> 1.4"},
+      {:mix_test_watch, "~> 1.2", only: :dev, runtime: false},
       {:phoenix, "~> 1.5"},
-      {:phoenix_ecto, "~> 4.0"},
+      {:phoenix_view, "~> 2.0"},
+      {:phoenix_ecto, "~> 4.5"},
       {:postgrex, ">= 0.0.0"},
       {:slugger, "~> 0.2"},
-      {:vex, "~> 0.6"}
+      {:vex, "~> 0.9"}
     ]
   end
 
