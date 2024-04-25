@@ -5,8 +5,8 @@ defmodule Conduit.Accounts.Projections.User do
   @timestamps_opts [type: :utc_datetime_usec]
 
   schema "accounts_users" do
-    field(:username, :string, unique: true)
-    field(:email, :string, unique: true)
+    field(:username, :string)
+    field(:email, :string)
     field(:hashed_password, :string)
 
     timestamps()
