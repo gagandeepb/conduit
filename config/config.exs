@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # General application configuration
 config :conduit,
@@ -50,4 +50,4 @@ config :conduit, Conduit.Auth.Guardian,
   verify_issuer: true,
   secret_key: "IOjbrty1eMEBzc5aczQn0FR4Gd8P9IF1cC7tqwB7ThV/uKjS5mrResG1Y0lCzTNJ"
 
-import_config "#{Mix.env()}.exs"
+import_config "#{config_env()}.exs"
